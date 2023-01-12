@@ -23,6 +23,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->singleton(Calculator::class, function ($app) { 
+            return new Calculator; 
+        });
     }
 }
+
+app(Calculator::class);
