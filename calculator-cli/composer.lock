@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "50a38899ea82de3207ad37c4a75de58d",
+    "content-hash": "1b2b5ff192389c59045466d8cb122d57",
     "packages": [
         {
             "name": "brick/math",
@@ -1162,6 +1162,53 @@
                 "source": "https://github.com/laravel/framework"
             },
             "time": "2023-01-10T14:07:07+00:00"
+        },
+        {
+            "name": "jlawrence/eos",
+            "version": "v3.2.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jlawrence11/eos.git",
+                "reference": "25e3d0f2316cb4636000f452a8e7dcc83725a32a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jlawrence11/eos/zipball/25e3d0f2316cb4636000f452a8e7dcc83725a32a",
+                "reference": "25e3d0f2316cb4636000f452a8e7dcc83725a32a",
+                "shasum": ""
+            },
+            "require-dev": {
+                "codeclimate/php-test-reporter": "dev-master",
+                "phpunit/phpunit": "4.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "jlawrence\\eos\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-2.1+"
+            ],
+            "authors": [
+                {
+                    "name": "Jon Lawrence",
+                    "email": "jon@jon-lawrence.com"
+                }
+            ],
+            "description": "Parse and solve math equations without using 'eval()'.",
+            "keywords": [
+                "eos",
+                "equations",
+                "math",
+                "solve"
+            ],
+            "support": {
+                "issues": "https://github.com/jlawrence11/eos/issues",
+                "source": "https://github.com/jlawrence11/eos/tree/master"
+            },
+            "time": "2016-03-02T22:35:41+00:00"
         },
         {
             "name": "jolicode/jolinotif",
