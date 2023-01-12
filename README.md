@@ -41,7 +41,13 @@ See the PHP info on http://localhost, or the static html page on http://localhos
     php calc solve 
 ```
 
-3. Running Unit Test:
+4. Executing command using the build
+```
+    cd builds
+    php calc-cli solve 1+1
+```
+
+5. Running Unit Test:
 ```
     php ./vendor/bin/pest   
 ```
@@ -49,4 +55,3 @@ See the PHP info on http://localhost, or the static html page on http://localhos
 ## Extension
 
 Additional operation(s) can be added in Calculator class. I can implement an interface for new classes but for simplicity, I keep the application lean.
-
