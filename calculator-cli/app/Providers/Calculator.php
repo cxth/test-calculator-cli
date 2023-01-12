@@ -170,7 +170,7 @@ class Calculator
     { 
         return explode($operator, $expression); 
     } 
-    
+
     /** 
      * Return solution for a mathematical expression given an operation 
      *  
@@ -210,13 +210,17 @@ class Calculator
     { 
         // list all allowed operations 
         $this->allowedOperations = ['+', '-', '*', '/', 'sqrt']; 
+
         // check the expression for allowed operations 
         $operations = []; 
         for ($i = 0; $i < count($this->allowedOperations); $i++) { 
             $operations[] = strpos($this->expression, $this->allowedOperations[$i]); 
         } 
+
         // get all found operations 
         $foundOperations = array_filter($operations, function($x) { return !empty($x); }); 
+
+        // solve simple or multiple math operation
         if (count($foundOperations) < 2) { 
             $this->solveExpression($this->allowedOperations[key($foundOperations)], $this->expression); 
         } else { 

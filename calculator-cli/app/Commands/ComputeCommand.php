@@ -2,7 +2,7 @@
 
 namespace App\Commands;
 
-use Illuminate\Console\Scheduling\Schedule;
+use App\Providers\Calculator;
 use LaravelZero\Framework\Commands\Command;
 
 class ComputeCommand extends Command
@@ -20,9 +20,21 @@ class ComputeCommand extends Command
      *
      * @return mixed
      */
-    public function handle()
+    public function handle(Calculator $calculator)
     {
-        //
+        $calculator->operand1 = $this->argument('operand1'); 
+        $calculator->operator = $this->argument('operator'); 
+        $calculator->operand2 = $this->argument('operand2'); 
+        $calculator->expression = (empty($calculator->operand1)) ? $this->ask('Enter input')  
+            : $calculator->operand1 . " " . $calculator->operator . " " . $calculator->operand2; 
+
+        $calculator->runSolve(); 
+        
+        if (!$calculator->error) { 
+            $this->info("Solution is: " . $calculator->solution); 
+        } else { 
+            $this->info("Error: " . $calculator->errorMessage); 
+        } 
     }
 
 }
