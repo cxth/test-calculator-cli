@@ -195,7 +195,6 @@ class Calculator
             case 'sqrt': 
                 return $this->performSquareRoot($this->getOperands('sqrt', $expression)); 
                 break; 
-             
             case 'multiple': 
                 return $this->performMultipleOperation($expression); 
                 break; 
