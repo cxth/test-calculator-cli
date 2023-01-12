@@ -220,7 +220,7 @@ class Calculator
         $foundOperations = array_filter($operations, function($x) { return !empty($x); }); 
 
         // solve simple or multiple math operation
-        if (count($foundOperations) < 2) { 
+        if (count($foundOperations) < 2 && !empty($foundOperations)) { 
             $this->solveExpression($this->allowedOperations[key($foundOperations)], $this->expression); 
         } else { 
             // use eos package for multi math operation 
