@@ -13,18 +13,11 @@ Repository: https://github.com/cxth/test-calculator-cli
 
 ## Usage
 
-1. Start the Docker container:
-
-```
-    docker run -p 80:8080 trafex/php-nginx
-```
-See the PHP info on http://localhost, or the static html page on http://localhost/test.html
-
-2. Navigate the calculator-cli directory
+1. Navigate the calculator-cli directory
 ```
     cd calculator-cli
 ```
-3. Executing command from cli:
+2. Executing command from cli:
 ```
     // simple
     php calc solve 1 + 2
@@ -32,22 +25,22 @@ See the PHP info on http://localhost, or the static html page on http://localhos
     // also work without spaces
     php calc solve 1+2
 
-    // multiple
+    // multiple operations
     php calc solve 1+2*3/4
 
     // *note: multiple operations should have no spaces*   
 
-    // command also accept user input
+    // command also accepts user input
     php calc solve 
 ```
 
-4. Executing command using the build
+3. Executing command using build
 ```
     cd builds
     php calc-cli solve 1+1
 ```
 
-5. Running Unit Test:
+4. Running Unit Test:
 ```
     php ./vendor/bin/pest   
 ```
